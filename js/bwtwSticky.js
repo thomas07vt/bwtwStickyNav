@@ -61,21 +61,21 @@ var bwtwSticky = (function() {
   }
 
   function getYOffset(element) {
+    
     var yPosition = 0;
-
     while(element) {
         yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
         element = element.offsetParent;
     }
 
     return yPosition;
-	}
+  }
 
-	function resize() {
-		// console.log("resize hit");
-		object.offset = getYOffset(object.html);
-	}
- 
+  function resize() {
+  	// console.log("resize hit");
+  	object.offset = getYOffset(object.html);
+  }
+
 
 	//// PUBLIC METHODS
   return {
