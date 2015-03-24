@@ -30,7 +30,7 @@ var bwtwSticky = (function() {
 	var object = {};
 
 	function init(id, classNames, offset) {
-		console.log("INIT HIT: " + id + " " + offset);
+		// console.log("INIT HIT: " + id + " " + offset);
 		object.html = document.getElementById(id);
 		object.offset = offset || getYOffset(object.html);
 
@@ -72,7 +72,7 @@ var bwtwSticky = (function() {
 	}
 
 	function resize() {
-		console.log("resize hit");
+		// console.log("resize hit");
 		object.offset = getYOffset(object.html);
 	}
  
