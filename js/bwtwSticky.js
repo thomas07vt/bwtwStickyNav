@@ -61,8 +61,8 @@ var bwtwSticky = (function() {
   }
 
   function getYOffset(element) {
-
     var yPosition = 0;
+
     while(element) {
         yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
         element = element.offsetParent;
@@ -75,6 +75,7 @@ var bwtwSticky = (function() {
     object.html.className = object.originalClasses;
     object.stuck = false;
     object.offset = getYOffset(object.html);
+    
     stickyNavScroll();
   }
 
