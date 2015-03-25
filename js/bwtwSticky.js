@@ -72,8 +72,10 @@ var bwtwSticky = (function() {
   }
 
   function resize() {
-  	// console.log("resize hit");
-  	object.offset = getYOffset(object.html);
+    object.html.className = object.originalClasses;
+    object.stuck = false;
+    object.offset = getYOffset(object.html);
+    stickyNavScroll();
   }
 
 
